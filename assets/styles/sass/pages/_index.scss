@@ -1,10 +1,39 @@
-.section-hero {
-  @include el-center;
-  @include dir-col;
-}
-
-.section-content {
-  padding: 40px 80px;
+.section{
+  &-hero {
+    @include el-center;
+    @include dir-col;
+  }
+  &-content {
+    padding: 40px 80px;
+  }
+  &-proposition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    width: 80%;
+    &__title{
+      font-size: 26px;
+      font-weight: 700;
+    }
+  }
+  /* Zone de saisie */
+  &-saisie {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  &-score {
+      font-size: 20px;
+  }
+  &-partage {
+      padding-top: 20px;
+  }
 }
 
 .anim {
@@ -13,6 +42,68 @@
     @include dir-col-reverse;
   }
 }
-span{
-  color: $color-light;
+
+/* Mise en forme des formulaires */
+input[type='radio'] {
+  filter: grayscale(1); /* Grayscale passe le bouton en niveau de gris */
 }
+
+
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+  margin-right: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  color: $color-white;
+  background-color: $color-primary-hover;
+}
+
+button:hover {
+  color: $color-white ;
+  background-color: $color-primary;
+  cursor: pointer;
+}
+
+button:focus {
+  border: 3px solid $color-primary;
+    
+}
+
+.section-jeu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Zone d'options */
+.options{
+  font-size: 18px;
+  label{
+    margin-right: 20px;
+  }
+}
+
+.optionSource {
+  margin: 20px;
+}
+
+.optionSource input[type='radio']:not(:first-child) {
+  margin-left: 20px;
+}
+

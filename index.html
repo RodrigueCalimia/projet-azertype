@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
-    <script src="./assets/js/script.js"></script>
+    <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
+    <!-- Attention, l'ordre des fichiers js est important.  -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -27,12 +31,53 @@
             <section class="section-hero">
                 <h1 class="section-hero__title">AzerType</h1>
                 <h2>L'application pour écrire plus vite !</h2>
-                <p>AzerType est une application en ligne pour apprendre à taper plus vite au clavier.</p>
+                <h3>AzerType est une application en ligne pour apprendre à taper plus vite au clavier.</h3>
+            </section>
+            <section class="section-jeu">
+                <section class="section-options">
+                    <p>Choisissez votre option et tapez la proposition qui s'affiche dans le champ en-dessous.</p>
+                    <form novalidate class="options">
+                        <input type="radio" name="optionSource" id="mots" value="1" checked>
+                        <label for="mots">Mots</label>
+                        <input type="radio" name="optionSource" id="phrases" value="2">
+                        <label for="phrases">Phrases</label>
+                    </form>
+                </section>
+                
+                <section class="section-proposition">
+                    <p class="section-proposition__title">Azerty</p>
+                    <div class="section-saisie">
+                        <input type="text" id="inputEcriture" name="inputEcriture">
+                        <button id="btnValiderMot">Valider</button>
+                    </div>
+                </section>
+
+                <section class="section-score">
+                    Votre score : <span>0</span>
+                </section>
+
+                <section class="section-partage">
+                    <button>Partager</button>
+                </section>
             </section>
         </main>
         <footer>
-            <p class="footer__copyright">Rodrigue CALIMIA | Tous droits réservés</p>
+            <p class="footer__copyright">@Copyright : Rodrigue CALIMIA | Tous droits réservés</p>
         </footer>
+
+        <!-- Popup de partage -->
+        <div class="popup-background">
+            <div class="popup">
+                <p>Partagez votre score</p>
+                <form novalidate>
+                    <label for="nom">Votre nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                    <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                    <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                    <button id="btnEnvoyerMail">Envoyer</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 

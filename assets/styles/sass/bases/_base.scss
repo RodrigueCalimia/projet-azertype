@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-size: 22px;
 }
 body{
   display: flex;
@@ -25,14 +26,19 @@ h2 {
 h1,
 h2,
 p {
-  text-align: center;
   margin: 20px;
 }
 
 a:hover {
   text-decoration: underline;
 }
-
+h1,
+h2,
+p,
 footer {
   @include el-center;
+}
+
+p{
+  font-weight: 300;
 }
