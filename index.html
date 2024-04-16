@@ -10,9 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
     <!-- Inclusion des 3 scripts nécessaires pour faire fonctionner le jeu -->
     <!-- Attention, l'ordre des fichiers js est important.  -->
-    <script src="assets/js/config.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/popup.js" defer></script>
 </head>
 
 <body>
@@ -64,19 +65,19 @@
         <footer>
             <p class="footer__copyright">@Copyright : Rodrigue CALIMIA | Tous droits réservés</p>
         </footer>
+    </div>
 
-        <!-- Popup de partage -->
-        <div class="popup-background">
-            <div class="popup">
-                <p>Partagez votre score</p>
-                <form novalidate>
-                    <label for="nom">Votre nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                    <label for="email">Avec qui voulez-vous partager votre score ?</label>
-                    <input type="email" id="email" name="email" placeholder="nom@domaine.com">
-                    <button id="btnEnvoyerMail">Envoyer</button>
-                </form>
-            </div>
+    <!-- Popup de partage -->
+    <div class="popup-background">
+        <div class="popup">
+            <div>Partagez votre score</div>
+            <form>
+                <label for="nom">Votre nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                <label for="email">Avec qui voulez-vous partager votre score ?</label>
+                <input type="email" id="email" name="email" placeholder="nom@domaine.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+            </form>
         </div>
     </div>
 </body>
